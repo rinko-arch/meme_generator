@@ -26,18 +26,18 @@ if image_charge is not None :
     texte_haut = st.text_input("Texte du haut", "MON TEXTE DU HAUT")
     col1, col2 = st.columns(2)
     with col1:
-        x_haut = st.slider("Position X (haut)", 0, largeur, 275)
+        x_haut = st.slider("Position X (haut)", 0, largeur, largeur // 2)
     with col2:
-        y_haut = st.slider("Position Y (haut)", 0, hauteur, 30)
+        y_haut = st.slider("Position Y (haut)", 0, hauteur, hauteur // 10)
 
     # Ajouter du texte n°2 sur mon image
     st.subheader("Texte du bas")
     texte_bas = st.text_input("Texte du bas", "MON TEXTE DU BAS")
     col1, col2 = st.columns(2)
     with col1 :
-        x_bas = st.slider("Position x (bas)", 0, largeur, 275)
+        x_bas = st.slider("Position x (bas)", 0, largeur, largeur // 2)
     with col2 :
-        y_bas = st.slider("Position y (bas)", 0, hauteur, 750)
+        y_bas = st.slider("Position y (bas)", 0, hauteur, hauteur - hauteur // 10)
 
     # Modifier le texte à afficher sur l'image
     st.subheader("Modifier les options du texte")
