@@ -43,8 +43,7 @@ if image_charge is not None :
     st.subheader("Modifier les options du texte")
     taille_texte = st.slider("Faites glisser le curseur pour agrandir ou diminuer le texte", min_value=10, max_value=500, value=50)
     couleur_texte = st.color_picker("Choisir la couleur du texte", value="#E8E0E0")
-    fonte = ImageFont.truetype("arial.ttf", taille_texte)
-
+    fonte = ImageFont.load_default(size=taille_texte)
 
 
     # Affichage du texte sur une copie de l'image
@@ -61,7 +60,7 @@ if image_charge is not None :
 
 
     # Afficher le résultat
-    fonte = ImageFont.truetype("arial.ttf", taille_texte)
+    fonte = ImageFont.load_default(size=taille_texte)
     st.image(image_modifiee, caption="Ton mème",width="content")
 
     # Créer un fichier en mémoire pour accueillir notre mème
